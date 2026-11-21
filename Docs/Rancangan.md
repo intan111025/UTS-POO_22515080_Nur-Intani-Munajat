@@ -32,5 +32,14 @@
 ### Main/Menu
 - Fungsi:
 
+## 3. Aturan Bisnis (Invariant)
+<!-- Tulis dengan kata-kata Anda sendiri. Untuk tiap aturan, tentukan
+     di class dan method mana aturan dijaga, dan pesan error saat dilanggar. -->
+### Aturan 1:
+- Dijaga di (class.method):
+- Pesan error:
 
+### Aturan 2:
+- Dijaga di (class.method):
+- Pesan error:
 
