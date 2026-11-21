@@ -143,3 +143,41 @@ Method:
 Hubungan:
 - dilakukan oleh 1 Anggota (asosiasi)
 - meminjam 1 Buku (asosiasi)
+
+
+### 8.Perpustakaan
+Atribut:
+- nama : String
+- alamat : String
+- daftarBuku : DaftarBukuTerurut
+- daftarAnggota : ArrayList<Anggota>
+- daftarPeminjaman : ArrayList<Peminjaman>
+- counterPeminjaman : int
+- totalDenda : double
+
+Konstruktor:
++ Perpustakaan()
++ Perpustakaan(nama : String, alamat : String)
++ Perpustakaan(nama : String, alamat : String, kapasitasBuku : int)
+
+Method:
++ getNama() : String
++ setNama(nama : String) : void
++ getAlamat() : String
++ setAlamat(alamat : String) : void
++ getDaftarBuku() : DaftarBukuTerurut
++ tambahBuku(buku : Buku) : boolean
++ tambahAnggota(anggota : Anggota) : boolean
++ cariAnggota(idAnggota : String) : Anggota
++ cariPeminjaman(idPeminjaman : String) : Peminjaman
++ pinjamBuku(idAnggota : String, kodeBuku : String, tanggal : LocalDate, lamaHari : int) : Peminjaman
++ kembalikanBuku(idPeminjaman : String, tanggalKembali : LocalDate) : double
++ tampilkanSemuaBuku() : void
++ tampilkanSemuaAnggota() : void
++ tampilkanSemuaPeminjaman() : void
++ tampilkanRingkasan() : void
+
+Hubungan:
+- memiliki 1 DaftarBukuTerurut (komposisi)
+- mendaftarkan 0..* Anggota (agregasi)
+- mencatat 0..* Peminjaman (komposisi)
