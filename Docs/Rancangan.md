@@ -211,3 +211,28 @@ Method:
 Catatan: KAPASITAS_DEFAULT adalah konstanta public static, jadi pada diagram ditulis dengan tanda + (+ KAPASITAS_DEFAULT : int = 100).
 
 Hubungan: menyimpan 0..100 Buku secara terurut (agregasi).
+
+### 11.Main
+Atribut:
+- perpustakaan : Perpustakaan (static)
+
+Method:
++ main(args : String[]) : void (static)
+- menuBuku() : void (static)
+- menuAnggota() : void (static)
+- menuTransaksi() : void (static)
+- menuCari() : void (static)
+- menuAdt() : void (static)
+
+Hubungan: memakai Perpustakaan dan memakai InputHelper (dependensi).
+
+### InputHelper
+Atribut:
+- SCANNER : Scanner (static)
+
+Method:
++ bacaString(prompt : String) : String (static)
++ bacaInt(prompt : String) : int (static)
++ bacaInt(prompt : String, min : int, max : int) : int (static)
++ bacaTanggal(prompt : String) : LocalDate (static)
+- bacaBaris() : String (static)
