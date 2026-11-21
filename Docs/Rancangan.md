@@ -181,3 +181,33 @@ Hubungan:
 - memiliki 1 DaftarBukuTerurut (komposisi)
 - mendaftarkan 0..* Anggota (agregasi)
 - mencatat 0..* Peminjaman (komposisi)
+
+
+### 10.DaftarBukuTerurut (Sorted List)
+Atribut:
+- KAPASITAS_DEFAULT : int = 100 (static, public)
+- data : Buku[]
+- jumlah : int
+- kapasitas : int
+
+Konstruktor:
++ DaftarBukuTerurut()
++ DaftarBukuTerurut(kapasitas : int)
+
+Method:
++ insert(buku : Buku) : boolean
++ remove(kodeBuku : String) : Buku
++ search(kodeBuku : String) : Buku
++ searchByJudul(judul : String) : Buku
++ get(index : int) : Buku
++ tampilkan() : void
++ size() : int
++ isEmpty() : boolean
++ isFull() : boolean
++ getKapasitas() : int
+- cariIndeks(kode : String) : int
+- normalisasi(kode : String) : String
+
+Catatan: KAPASITAS_DEFAULT adalah konstanta public static, jadi pada diagram ditulis dengan tanda + (+ KAPASITAS_DEFAULT : int = 100).
+
+Hubungan: menyimpan 0..100 Buku secara terurut (agregasi).
