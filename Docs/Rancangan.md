@@ -83,3 +83,31 @@ Method:
 + tampilkanInfo() : void
 
 Hubungan: disimpan oleh DaftarBukuTerurut, dan bisa muncul di 0..* Peminjaman.
+
+### 6.Anggota
+Atribut:
++ MAX_PINJAM : int = 3 (static, konstanta)
+- idAnggota : String
+- nama : String
+- jumlahPinjamAktif : int
+- aktif : boolean
+
+Konstruktor:
++ Anggota()
++ Anggota(idAnggota : String, nama : String)
+
+Method:
++ getIdAnggota() : String
++ setIdAnggota(idAnggota : String) : void
++ getNama() : String
++ setNama(nama : String) : void
++ getJumlahPinjamAktif() : int
++ setJumlahPinjamAktif(jumlah : int) : void
++ isAktif() : boolean
++ setAktif(aktif : boolean) : void
++ bisaMeminjam() : boolean
++ tambahPinjamAktif() : boolean
++ kurangiPinjamAktif() : boolean
++ tampilkanInfo() : void
+
+Hubungan: melakukan 0..3 Peminjaman aktif (asosiasi).
