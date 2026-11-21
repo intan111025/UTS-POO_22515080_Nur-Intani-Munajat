@@ -236,3 +236,12 @@ Method:
 + bacaInt(prompt : String, min : int, max : int) : int (static)
 + bacaTanggal(prompt : String) : LocalDate (static)
 - bacaBaris() : String (static)
+
+### 12.Ringkasan Relasi
+1. Perpustakaan 1 ke 1 DaftarBukuTerurut: komposisi, "memiliki koleksi"
+2. DaftarBukuTerurut 1 ke 0..100 Buku: agregasi, "menyimpan terurut"
+3. Perpustakaan 1 ke 0..* Anggota: agregasi, "mendaftarkan"
+4. Perpustakaan 1 ke 0..* Peminjaman: komposisi, "mencatat"
+5. Anggota 1 ke 0..3 Peminjaman: asosiasi, "melakukan"
+6. Peminjaman 0..* ke 1 Buku: asosiasi, "meminjam"
+7. Main ke Perpustakaan dan Main ke InputHelper: dependensi
