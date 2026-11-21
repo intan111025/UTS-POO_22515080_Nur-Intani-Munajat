@@ -111,3 +111,35 @@ Method:
 + tampilkanInfo() : void
 
 Hubungan: melakukan 0..3 Peminjaman aktif (asosiasi).
+
+
+### 7.Peminjaman
+Atribut:
++ DENDA_PER_HARI : double = 1000 (static, konstanta)
+- idPeminjaman : String
+- anggota : Anggota
+- buku : Buku
+- tanggalPinjam : LocalDate
+- lamaPinjamHari : int
+- dikembalikan : boolean
+
+Konstruktor:
++ Peminjaman()
++ Peminjaman(idPeminjaman : String, anggota : Anggota, buku : Buku, tanggalPinjam : LocalDate, lamaPinjamHari : int)
+
+Method:
++ getIdPeminjaman() : String
++ getAnggota() : Anggota
++ getBuku() : Buku
++ getTanggalPinjam() : LocalDate
++ getLamaPinjamHari() : int
++ setLamaPinjamHari(lama : int) : void
++ isDikembalikan() : boolean
++ hitungJatuhTempo() : LocalDate
++ hitungDenda(tanggalKembali : LocalDate) : double
++ kembalikan(tanggalKembali : LocalDate) : double
++ tampilkanInfo() : void
+
+Hubungan:
+- dilakukan oleh 1 Anggota (asosiasi)
+- meminjam 1 Buku (asosiasi)
