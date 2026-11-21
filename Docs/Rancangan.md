@@ -57,3 +57,29 @@ Invariant wajib:
 Atribut kunci pengurutan ADT adalah **kodeBuku**. Dengan kunci ini, pencarian berdasarkan kode memakai binary search, sedangkan pencarian berdasarkan judul memakai linear search.
 
 ---
+### 5.Buku
+Atribut:
+- kodeBuku : String
+- judul : String
+- pengarang : String
+- stok : int
+
+Konstruktor:
++ Buku()
++ Buku(kodeBuku : String, judul : String, pengarang : String, stok : int)
+
+Method:
++ getKodeBuku() : String
++ setKodeBuku(kodeBuku : String) : void
++ getJudul() : String
++ setJudul(judul : String) : void
++ getPengarang() : String
++ setPengarang(pengarang : String) : void
++ getStok() : int
++ setStok(stok : int) : void
++ isTersedia() : boolean
++ kurangiStok() : boolean
++ tambahStok(jumlah : int) : boolean
++ tampilkanInfo() : void
+
+Hubungan: disimpan oleh DaftarBukuTerurut, dan bisa muncul di 0..* Peminjaman.
