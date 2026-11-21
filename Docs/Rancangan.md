@@ -57,4 +57,3 @@ Invariant wajib:
 Atribut kunci pengurutan ADT adalah **kodeBuku**. Dengan kunci ini, pencarian berdasarkan kode memakai binary search, sedangkan pencarian berdasarkan judul memakai linear search.
 
 ---
-
