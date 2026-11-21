@@ -43,3 +43,18 @@
 - Dijaga di (class.method):
 - Pesan error:
 
+## 4. Penentuan Topik dan Jenis ADT
+
+- Digit terakhir NIM adalah 0, sehingga topik adalah **Perpustakaan Mini**.
+- Digit kedua dari belakang adalah 8, dan 8 mod 3 = 2, sehingga ADT adalah **Sorted List (array terurut)**.
+
+Class wajib: Buku, Anggota, Peminjaman, Perpustakaan.
+
+Invariant wajib:
+1. Anggota maksimal meminjam 3 buku pada waktu yang sama.
+2. Stok buku tidak boleh negatif.
+
+Atribut kunci pengurutan ADT adalah **kodeBuku**. Dengan kunci ini, pencarian berdasarkan kode memakai binary search, sedangkan pencarian berdasarkan judul memakai linear search.
+
+---
+
