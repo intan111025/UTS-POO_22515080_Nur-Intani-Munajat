@@ -1,3 +1,5 @@
+package perpustakaan.model;
+
 public class Buku {
 
     private String kodeBuku;
