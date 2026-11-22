@@ -1,4 +1,4 @@
 package perpustakaan.model;
 
-public class peminjaman s{
+public class peminjaman {
 }
