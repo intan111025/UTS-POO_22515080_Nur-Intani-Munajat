@@ -1,4 +1,4 @@
-package perpustakaan.model;
+package perpustakaan.adt;
 
 public class DaftarBukuTerurut {
 }
