@@ -10,7 +10,7 @@
      apa yang bisa dilakukan pengguna lewat menu console. -->
 
 ## 2. Daftar Class dan Alasan Pemilihan
-### Buku
+### perpustakaan.model.Anggota.Buku
 - Objek dunia nyata:
 - Alasan dijadikan class:
 
@@ -48,7 +48,7 @@
 - Digit terakhir NIM adalah 0, sehingga topik adalah **Perpustakaan Mini**.
 - Digit kedua dari belakang adalah 8, dan 8 mod 3 = 2, sehingga ADT adalah **Sorted List (array terurut)**.
 
-Class wajib: Buku, Anggota, Peminjaman, Perpustakaan.
+Class wajib: perpustakaan.model.Anggota.Buku, Anggota, Peminjaman, Perpustakaan.
 
 Invariant wajib:
 1. Anggota maksimal meminjam 3 buku pada waktu yang sama.
@@ -57,7 +57,7 @@ Invariant wajib:
 Atribut kunci pengurutan ADT adalah **kodeBuku**. Dengan kunci ini, pencarian berdasarkan kode memakai binary search, sedangkan pencarian berdasarkan judul memakai linear search.
 
 ---
-### 5.Buku
+### 5.perpustakaan.model.Anggota.Buku
 Atribut:
 - kodeBuku : String
 - judul : String
@@ -65,8 +65,8 @@ Atribut:
 - stok : int
 
 Konstruktor:
-+ Buku()
-+ Buku(kodeBuku : String, judul : String, pengarang : String, stok : int)
++ perpustakaan.model.Anggota.Buku()
++ perpustakaan.model.Anggota.Buku(kodeBuku : String, judul : String, pengarang : String, stok : int)
 
 Method:
 + getKodeBuku() : String
@@ -118,19 +118,19 @@ Atribut:
 + DENDA_PER_HARI : double = 1000 (static, konstanta)
 - idPeminjaman : String
 - anggota : Anggota
-- buku : Buku
+- buku : perpustakaan.model.Anggota.Buku
 - tanggalPinjam : LocalDate
 - lamaPinjamHari : int
 - dikembalikan : boolean
 
 Konstruktor:
 + Peminjaman()
-+ Peminjaman(idPeminjaman : String, anggota : Anggota, buku : Buku, tanggalPinjam : LocalDate, lamaPinjamHari : int)
++ Peminjaman(idPeminjaman : String, anggota : Anggota, buku : perpustakaan.model.Anggota.Buku, tanggalPinjam : LocalDate, lamaPinjamHari : int)
 
 Method:
 + getIdPeminjaman() : String
 + getAnggota() : Anggota
-+ getBuku() : Buku
++ getBuku() : perpustakaan.model.Anggota.Buku
 + getTanggalPinjam() : LocalDate
 + getLamaPinjamHari() : int
 + setLamaPinjamHari(lama : int) : void
@@ -142,7 +142,7 @@ Method:
 
 Hubungan:
 - dilakukan oleh 1 Anggota (asosiasi)
-- meminjam 1 Buku (asosiasi)
+- meminjam 1 perpustakaan.model.Anggota.Buku (asosiasi)
 
 
 ### 8.Perpustakaan
@@ -166,7 +166,7 @@ Method:
 + getAlamat() : String
 + setAlamat(alamat : String) : void
 + getDaftarBuku() : DaftarBukuTerurut
-+ tambahBuku(buku : Buku) : boolean
++ tambahBuku(buku : perpustakaan.model.Anggota.Buku) : boolean
 + tambahAnggota(anggota : Anggota) : boolean
 + cariAnggota(idAnggota : String) : Anggota
 + cariPeminjaman(idPeminjaman : String) : Peminjaman
@@ -186,7 +186,7 @@ Hubungan:
 ### 10.DaftarBukuTerurut (Sorted List)
 Atribut:
 - KAPASITAS_DEFAULT : int = 100 (static, public)
-- data : Buku[]
+- data : perpustakaan.model.Anggota.Buku[]
 - jumlah : int
 - kapasitas : int
 
@@ -195,11 +195,11 @@ Konstruktor:
 + DaftarBukuTerurut(kapasitas : int)
 
 Method:
-+ insert(buku : Buku) : boolean
-+ remove(kodeBuku : String) : Buku
-+ search(kodeBuku : String) : Buku
-+ searchByJudul(judul : String) : Buku
-+ get(index : int) : Buku
++ insert(buku : perpustakaan.model.Anggota.Buku) : boolean
++ remove(kodeBuku : String) : perpustakaan.model.Anggota.Buku
++ search(kodeBuku : String) : perpustakaan.model.Anggota.Buku
++ searchByJudul(judul : String) : perpustakaan.model.Anggota.Buku
++ get(index : int) : perpustakaan.model.Anggota.Buku
 + tampilkan() : void
 + size() : int
 + isEmpty() : boolean
@@ -210,7 +210,7 @@ Method:
 
 Catatan: KAPASITAS_DEFAULT adalah konstanta public static, jadi pada diagram ditulis dengan tanda + (+ KAPASITAS_DEFAULT : int = 100).
 
-Hubungan: menyimpan 0..100 Buku secara terurut (agregasi).
+Hubungan: menyimpan 0..100 perpustakaan.model.Anggota.Buku secara terurut (agregasi).
 
 ### 11.Main
 Atribut:
@@ -239,9 +239,9 @@ Method:
 
 ### 12.Ringkasan Relasi
 1. Perpustakaan 1 ke 1 DaftarBukuTerurut: komposisi, "memiliki koleksi"
-2. DaftarBukuTerurut 1 ke 0..100 Buku: agregasi, "menyimpan terurut"
+2. DaftarBukuTerurut 1 ke 0..100 perpustakaan.model.Anggota.Buku: agregasi, "menyimpan terurut"
 3. Perpustakaan 1 ke 0..* Anggota: agregasi, "mendaftarkan"
 4. Perpustakaan 1 ke 0..* Peminjaman: komposisi, "mencatat"
 5. Anggota 1 ke 0..3 Peminjaman: asosiasi, "melakukan"
-6. Peminjaman 0..* ke 1 Buku: asosiasi, "meminjam"
+6. Peminjaman 0..* ke 1 perpustakaan.model.Anggota.Buku: asosiasi, "meminjam"
 7. Main ke Perpustakaan dan Main ke InputHelper: dependensi
